@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cyber Security Engineer | ALSAYED MOHSEN</title>
+<meta name="description" content="Portfolio landing page for ALSAYED MOHSEN, Cyber Security Engineer and Ethical Hacker.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root {
+    --bg: #07111a;
+    --text: #ecfff9;
+    --muted: #a7d6ce;
+    --accent: #65ffdc;
+    --accent-2: #2ad3ff;
+    --warning: #8fffb4;
+    --line: rgba(101, 255, 220, 0.12);
+    --line-strong: rgba(101, 255, 220, 0.26);
+    --shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+    --radius-lg: 28px;
+    --radius-md: 18px;
+    --container: 1160px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Space Grotesk", sans-serif;
+    color: var(--text);
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(4, 10, 16, 0.22), rgba(4, 10, 16, 0.30)),
+        url("bg.jpg") center center / cover fixed no-repeat,
+        radial-gradient(circle at 15% 20%, rgba(42, 211, 255, 0.08), transparent 28%),
+        radial-gradient(circle at 85% 15%, rgba(101, 255, 220, 0.08), transparent 25%),
+        linear-gradient(180deg, #08131d 0%, #040a10 100%);
+    overflow-x: hidden;
+}
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -2;
+}
+
+body::before {
+    background-image:
+        linear-gradient(rgba(101, 255, 220, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(101, 255, 220, 0.035) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(circle at center, black 45%, transparent 95%);
+}
+
+body::after {
+    z-index: -1;
+    background:
+        linear-gradient(135deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.09)),
+        linear-gradient(transparent 0%, rgba(0, 0, 0, 0.05) 100%);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: min(var(--container), calc(100% - 32px));
+    margin: 0 auto;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    backdrop-filter: blur(8px);
+    background: rgba(4, 12, 18, 0.18);
+    border-bottom: 1px solid rgba(101, 255, 220, 0.06);
+}
+
+.nav-shell {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 0;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.brand-badge {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    color: var(--bg);
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    box-shadow: 0 0 20px rgba(101, 255, 220, 0.18);
+}
+
+.brand-title {
+    font-size: 0.8rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.brand-name {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links a {
+    padding: 10px 14px;
+    border-radius: 999px;
+    color: var(--muted);
+    transition: 0.25s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+    color: var(--text);
+    background: rgba(101, 255, 220, 0.04);
+}
+
+.hero {
+    padding: 84px 0 42px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+    gap: 28px;
+    align-items: stretch;
+}
+
+.hero-copy,
+.hero-panel,
+.section-card,
+.contact-card {
+    background: linear-gradient(180deg, rgba(10, 27, 37, 0.09), rgba(5, 15, 23, 0.12));
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(3px);
+}
+
+.hero-copy {
+    padding: 36px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-copy::before {
+    content: "";
+    position: absolute;
+    inset: auto -80px -80px auto;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(42, 211, 255, 0.10), transparent 70%);
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    padding: 9px 14px;
+    border-radius: 999px;
+    background: rgba(101, 255, 220, 0.05);
+    color: var(--warning);
+    font-size: 0.84rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: clamp(2.6rem, 7vw, 5.3rem);
+    line-height: 0.94;
+    margin-bottom: 16px;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--accent);
+    text-shadow: 0 0 18px rgba(101, 255, 220, 0.12);
+}
+
+.lead {
+    max-width: 58ch;
+    color: var(--muted);
+    font-size: 1.03rem;
+    line-height: 1.8;
+}
+
+.type-line {
+    margin: 24px 0 30px;
+    min-height: 30px;
+    font-family: "Share Tech Mono", monospace;
+    font-size: 1rem;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+}
+
+.type-line::after {
+    content: "_";
+    margin-left: 4px;
+    animation: blink 0.9s steps(1) infinite;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn,
+.btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 160px;
+    padding: 14px 20px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    font-weight: 700;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.btn {
+    color: var(--bg);
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    box-shadow: 0 12px 28px rgba(42, 211, 255, 0.12);
+}
+
+.btn-ghost {
+    color: var(--text);
+    border-color: var(--line-strong);
+    background: rgba(101, 255, 220, 0.02);
+}
+
+.btn:hover,
+.btn-ghost:hover,
+.btn:focus-visible,
+.btn-ghost:focus-visible {
+    transform: translateY(-2px);
+}
+
+.hero-panel {
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.profile-card,
+.stat-card,
+.contact-item,
+.social-panel,
+.social-links a {
+    background: rgba(255, 255, 255, 0.008);
+    backdrop-filter: blur(2px);
+}
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px;
+    border-radius: 22px;
+    border: 1px solid rgba(101, 255, 220, 0.08);
+}
+
+.profile-image {
+    width: 88px;
+    height: 88px;
+    display: block;
+    border-radius: 22px;
+    object-fit: cover;
+    border: 1px solid rgba(101, 255, 220, 0.14);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.profile-copy p {
+    color: var(--muted);
+    margin-top: 6px;
+    line-height: 1.6;
+}
+
+.terminal-bar {
+    display: flex;
+    gap: 8px;
+}
+
+.terminal-bar span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.terminal-bar span:nth-child(1) { background: #ff5f57; }
+.terminal-bar span:nth-child(2) { background: #febc2e; }
+.terminal-bar span:nth-child(3) { background: #28c840; }
+
+.terminal {
+    padding: 20px;
+    border-radius: 22px;
+    background: rgba(5, 16, 25, 0.10);
+    border: 1px solid rgba(101, 255, 220, 0.10);
+    backdrop-filter: blur(2px);
+    font-family: "Share Tech Mono", monospace;
+}
+
+.terminal p {
+    color: var(--muted);
+    margin-bottom: 10px;
+}
+
+.terminal p:last-child {
+    margin-bottom: 0;
+}
+
+.terminal .prompt {
+    color: var(--accent);
+}
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.stat-card {
+    padding: 18px 14px;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(101, 255, 220, 0.06);
+}
+
+.stat-card strong {
+    display: block;
+    font-size: 1.55rem;
+    margin-bottom: 6px;
+}
+
+.stat-card span {
+    color: var(--muted);
+    font-size: 0.94rem;
+}
+
+.section {
+    padding: 26px 0;
+}
+
+.section-card {
+    padding: 32px;
+}
+
+.section-head {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 26px;
+}
+
+.section-head h2 {
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
+    margin-bottom: 8px;
+}
+
+.section-head p {
+    color: var(--muted);
+    max-width: 55ch;
+    line-height: 1.8;
+}
+
+.section-kicker {
+    font-size: 0.84rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    padding: 24px;
+    border-radius: var(--radius-md);
+    background: linear-gradient(180deg, rgba(13, 30, 42, 0.07), rgba(7, 18, 27, 0.10));
+    border: 1px solid rgba(101, 255, 220, 0.08);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    backdrop-filter: blur(2px);
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: var(--line-strong);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.10);
+}
+
+.card-icon {
+    width: 54px;
+    height: 54px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 18px;
+    border-radius: 16px;
+    color: var(--accent);
+    background: rgba(101, 255, 220, 0.03);
+    font-size: 1.2rem;
+}
+
+.card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.tag {
+    padding: 8px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(101, 255, 220, 0.09);
+    color: var(--muted);
+    background: rgba(101, 255, 220, 0.02);
+    font-size: 0.86rem;
+}
+
+.contact-card {
+    padding: 32px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 24px;
+    align-items: start;
+}
+
+.contact-list {
+    display: grid;
+    gap: 14px;
+    margin-top: 22px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 18px;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(101, 255, 220, 0.06);
+}
+
+.contact-item i {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    color: var(--accent);
+    background: rgba(101, 255, 220, 0.03);
+}
+
+.contact-item span {
+    display: block;
+    color: var(--muted);
+    font-size: 0.88rem;
+}
+
+.contact-item strong {
+    font-size: 1rem;
+}
+
+.social-panel {
+    padding: 22px;
+    border-radius: 22px;
+    border: 1px solid rgba(101, 255, 220, 0.06);
+}
+
+.social-panel h3 {
+    margin-bottom: 10px;
+}
+
+.social-panel p {
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.social-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+    border-radius: 16px;
+    border: 1px solid rgba(101, 255, 220, 0.06);
+    transition: 0.25s ease;
+}
+
+.social-links a:hover,
+.social-links a:focus-visible {
+    transform: translateY(-3px);
+    border-color: var(--line-strong);
+}
+
+.social-links i {
+    font-size: 1.15rem;
+}
+
+.site-footer {
+    padding: 26px 0 44px;
+    text-align: center;
+    color: var(--muted);
+}
+
+.site-footer p + p {
+    margin-top: 8px;
+    font-size: 0.95rem;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+@media (max-width: 980px) {
+    .hero-grid,
+    .contact-card {
+        grid-template-columns: 1fr;
+    }
+
+    .cards,
+    .stat-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .section-head {
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+@media (max-width: 720px) {
+    .nav-shell {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .brand {
+        justify-content: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+
+    .hero {
+        padding-top: 52px;
+    }
+
+    .hero-copy,
+    .hero-panel,
+    .section-card,
+    .contact-card {
+        padding: 22px;
+        border-radius: 22px;
+    }
+
+    .cards,
+    .stat-grid,
+    .social-links {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-actions .btn,
+    .hero-actions .btn-ghost {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+<header class="site-header">
+    <div class="container nav-shell">
+        <a class="brand" href="#home" aria-label="ALSAYED MOHSEN home">
+            <div class="brand-badge">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div>
+                <p class="brand-title">Cyber Engineer</p>
+                <h2 class="brand-name">ALSAYED MOHSEN</h2>
+            </div>
+        </a>
+
+        <nav class="nav-links" aria-label="Primary">
+            <a href="#home">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero" id="home">
+        <div class="container hero-grid">
+            <div class="hero-copy reveal">
+                <div class="eyebrow">
+                    <i class="fa-solid fa-terminal"></i>
+                    Cyber Security Portfolio
+                </div>
+                <h1>
+                    Defending systems with
+                    <span>precision and curiosity.</span>
+                </h1>
+                <p class="lead">
+                    I am ALSAYED MOHSEN, a Cyber Security Engineer focused on practical defense, ethical hacking,
+                    and building secure solutions with a clear technical mindset.
+                </p>
+                <p class="type-line" id="typing-line" aria-live="polite"></p>
+
+                <div class="hero-actions">
+                    <a class="btn" href="#projects"><i class="fa-solid fa-bug-slash"></i> View Projects</a>
+                    <a class="btn-ghost" href="#contact"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
+                </div>
+            </div>
+
+            <aside class="hero-panel reveal">
+                <div class="profile-card">
+                    <img class="profile-image" src="profile.jpg" alt="Portrait of ALSAYED MOHSEN">
+                    <div class="profile-copy">
+                        <strong>ALSAYED MOHSEN</strong>
+                        <p>Cyber Security Engineer</p>
+                    </div>
+                </div>
+
+                <div class="terminal">
+                    <div class="terminal-bar" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p><span class="prompt">$</span> whoami</p>
+                    <p>ALSAYED MOHSEN</p>
+                    <p><span class="prompt">$</span> role</p>
+                    <p>Cyber Security Engineer | Ethical Hacker</p>
+                    <p><span class="prompt">$</span> focus</p>
+                    <p>Web security, network analysis, and secure development.</p>
+                </div>
+
+                <div class="stat-grid">
+                    <div class="stat-card">
+                        <strong>3+</strong>
+                        <span>Core security domains</span>
+                    </div>
+                    <div class="stat-card">
+                        <strong>3</strong>
+                        <span>Featured projects</span>
+                    </div>
+                    <div class="stat-card">
+                        <strong>24/7</strong>
+                        <span>Security mindset</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <section class="section" id="skills">
+        <div class="container section-card reveal">
+            <div class="section-head">
+                <div>
+                    <p class="section-kicker">Capabilities</p>
+                    <h2>Skills built for real security work</h2>
+                </div>
+                <p>
+                    A focused toolkit across offensive testing, defensive analysis, and programming for automation
+                    and secure solution building.
+                </p>
+            </div>
+
+            <div class="cards">
+                <article class="card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-user-secret"></i>
+                    </div>
+                    <h3>Penetration Testing</h3>
+                    <p>Testing targets methodically to uncover vulnerabilities, validate exposure, and improve defenses.</p>
+                    <div class="tag-list">
+                        <span class="tag">Recon</span>
+                        <span class="tag">Exploitation</span>
+                        <span class="tag">Reporting</span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3>Network Security</h3>
+                    <p>Understanding traffic, misconfigurations, and weak points in network architecture and services.</p>
+                    <div class="tag-list">
+                        <span class="tag">Scanning</span>
+                        <span class="tag">Monitoring</span>
+                        <span class="tag">Hardening</span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3>Python / C++ / R</h3>
+                    <p>Using code to automate tasks, build utilities, analyze data, and turn ideas into working tools.</p>
+                    <div class="tag-list">
+                        <span class="tag">Automation</span>
+                        <span class="tag">Tools</span>
+                        <span class="tag">Analysis</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="projects">
+        <div class="container section-card reveal">
+            <div class="section-head">
+                <div>
+                    <p class="section-kicker">Projects</p>
+                    <h2>Selected practical builds</h2>
+                </div>
+                <p>
+                    A few sample projects that reflect both curiosity and applied security engineering.
+                </p>
+            </div>
+
+            <div class="cards">
+                <article class="card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-key"></i>
+                    </div>
+                    <h3>Password Cracker</h3>
+                    <p>A learning-focused project exploring password strength, attack logic, and defensive awareness.</p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <h3>Login System</h3>
+                    <p>A secure authentication concept emphasizing validation, flow control, and safer access design.</p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-radar"></i>
+                    </div>
+                    <h3>Network Scanner</h3>
+                    <p>A utility for discovering hosts and services to support visibility, auditing, and diagnostics.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="container contact-card reveal">
+            <div>
+                <p class="section-kicker">Contact</p>
+                <h2>Let's connect and build something secure</h2>
+                <p class="lead">
+                    Available for communication, collaboration, and professional networking through email, phone,
+                    or social platforms.
+                </p>
+
+                <div class="contact-list">
+                    <a class="contact-item" href="mailto:sm3515528@gmail.com">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <span>Email</span>
+                            <strong>sm3515528@gmail.com</strong>
+                        </div>
+                    </a>
+
+                    <a class="contact-item" href="tel:+201115286497">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <span>Phone</span>
+                            <strong>+20 111 528 6497</strong>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <aside class="social-panel">
+                <h3>Social Links</h3>
+                <p>Choose your preferred channel and reach out directly.</p>
+
+                <div class="social-links">
+                    <a href="https://wa.me/201115286497" target="_blank" rel="noreferrer">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="https://instagram.com/alsayed.mohsen.26" target="_blank" rel="noreferrer">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://facebook.com/alsayed.mohsen.26" target="_blank" rel="noreferrer">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://t.me/ALSAYED_MOHSEN" target="_blank" rel="noreferrer">
+                        <i class="fa-brands fa-telegram"></i>
+                        <span>Telegram</span>
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>&copy; 2026 ALSAYED MOHSEN</p>
+        <p>Cyber Security Engineer | Ethical Hacker</p>
+    </div>
+</footer>
+
+<script>
+const typingPhrases = [
+    "Cyber Security Engineer",
+    "Ethical Hacker",
+    "Network Security Enthusiast",
+    "Python-Powered Problem Solver"
+];
+
+const typingTarget = document.getElementById("typing-line");
+let phraseIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function typeLoop() {
+    const currentPhrase = typingPhrases[phraseIndex];
+    typingTarget.textContent = currentPhrase.slice(0, charIndex);
+
+    if (!isDeleting) {
+        charIndex += 1;
+        if (charIndex > currentPhrase.length) {
+            isDeleting = true;
+            setTimeout(typeLoop, 1100);
+            return;
+        }
+        setTimeout(typeLoop, 70);
+        return;
+    }
+
+    charIndex -= 1;
+    if (charIndex < 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % typingPhrases.length;
+        charIndex = 0;
+        setTimeout(typeLoop, 220);
+        return;
+    }
+    setTimeout(typeLoop, 40);
+}
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+        }
+    });
+}, { threshold: 0.18 });
+
+document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+typeLoop();
+</script>
+</body>
+</html>
